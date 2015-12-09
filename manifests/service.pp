@@ -126,6 +126,7 @@ class docker::service (
   $provider = $::operatingsystem ? {
     'Ubuntu'  => $::lsbdistrelease ? {
       '15.04' => 'systemd',
+      '15.10' => 'systemd',
       default => 'upstart'
     },
     
